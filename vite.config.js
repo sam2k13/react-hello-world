@@ -6,6 +6,9 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 8080,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: [
+      'codegen-playground-app.orangefield-9820aa17.eastus.azurecontainerapps.io'
+    ]
   }
 })
