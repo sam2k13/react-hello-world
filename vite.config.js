@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 8080,
+    port: 5173,
     strictPort: true,
     allowedHosts: [
       'codegen-playground-app.orangefield-9820aa17.eastus.azurecontainerapps.io'
