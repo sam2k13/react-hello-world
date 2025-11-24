@@ -5,10 +5,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    port: 5173,
+    port: 8080,
     strictPort: true,
     allowedHosts: [
       'codegen-playground-app.orangefield-9820aa17.eastus.azurecontainerapps.io'
-    ]
+    ],
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true
+      }
+    }
   }
 })
