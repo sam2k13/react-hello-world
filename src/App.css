@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -20,20 +23,95 @@
   font-weight: 600;
 }
 
-.App-header {
+.main-container {
+  display: flex;
+  margin-top: 60px;
+  flex: 1;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #2a2a2a;
+  padding: 2rem 0;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin: 0 0 1.5rem 1rem;
+  font-size: 1.3rem;
+}
+
+.game-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-menu li {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-left: 3px solid transparent;
+}
+
+.game-menu li:hover {
+  background-color: #3a3a3a;
+  border-left-color: orange;
+}
+
+.game-menu li.active {
   background-color: orange;
-  min-height: 100vh;
+  color: black;
+  font-weight: 600;
+  border-left-color: orange;
+}
+
+.game-icon {
+  font-size: 1.5rem;
+}
+
+.game-name {
+  font-size: 1rem;
+}
+
+.game-area {
+  flex: 1;
+  margin-left: 200px;
+  background-color: orange;
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  padding-top: 60px;
+  padding: 2rem;
 }
 
-.card {
-  padding: 2em;
+.game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.game-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: black;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  margin: 0;
 }
 
 .game-container {
@@ -46,6 +124,20 @@
   background-color: #1a1a1a;
   border: 3px solid #333;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.game-canvas {
+  background-color: #1a1a1a;
+  border: 3px solid #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.tetris-board {
+  background-color: #1a1a1a;
+}
+
+.tetris-cell {
+  box-sizing: border-box;
 }
 
 .snake-segment {
@@ -87,13 +179,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: orange;
+  color: black;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color: #ff8c00;
+  transform: scale(1.05);
 }
 
 button:focus,
