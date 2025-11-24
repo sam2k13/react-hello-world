@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.navbar {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .App-header {
   background-color: orange;
   min-height: 100vh;
@@ -11,6 +29,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+  padding-top: 60px;
 }
 
 .card {

@@ -6,6 +6,9 @@ function App() {
 
   return (
     <div className="App">
+      <nav className="navbar">
+        <h1>CloudFit Software</h1>
+      </nav>
       <header className="App-header">
         <h1>Hello World!</h1>
         <p>Welcome to React with Vite</p>
